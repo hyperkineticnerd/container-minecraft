@@ -8,4 +8,10 @@
 #     source ./environment
 # fi
 
+if ! grep -q "eula=true" eula.txt; then
+    if [ "${EULA}" = true ]; then
+        echo "eula=true" | tee eula.txt
+    fi
+fi
+
 java $JAVA_OPTS -jar $JAR $MC_OPTS

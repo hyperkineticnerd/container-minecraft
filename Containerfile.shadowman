@@ -4,11 +4,7 @@ FROM quay.io/hyperkineticnerd/minecraft:1.18.2-fabric
 WORKDIR /minecraft
 COPY files/shadowman/server.properties /minecraft/
 COPY files/shadowman/eula.txt /minecraft/
-
-# WORKDIR /minecraft/mods
 COPY files/shadowman/mods/* /minecraft/mods/
-
-# WORKDIR /minecraft/world/datapacks
 COPY files/shadowman/datapacks/* /minecraft/world/datapacks/
 
 EXPOSE 24454/udp

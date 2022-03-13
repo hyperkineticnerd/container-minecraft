@@ -17,5 +17,6 @@ RUN java -jar ${fabric_installer} server -mcserver ${mc_ver} -downloadMinecraft 
     && chmod +x /minecraft/minecraft-entrypoint.sh
 
 EXPOSE 25565/tcp
-WORKDIR /minecraft
+VOLUME /minecraft/mods
+VOLUME /minecraft/world
 CMD ["/minecraft/minecraft-entrypoint.sh"]
