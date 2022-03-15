@@ -1,0 +1,8 @@
+# FROM registry.access.redhat.com/ubi8/ubi-minimal
+# FROM registry.access.redhat.com/ubi8/openjdk-11-runtime
+FROM registry.access.redhat.com/ubi8/openjdk-17-runtime
+
+USER root
+RUN microdnf install python3 && \
+    microdnf clean all && \
+    [ ! -d /var/cache/yum ] || rm -rf /var/cache/yum

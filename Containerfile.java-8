@@ -1,0 +1,8 @@
+FROM registry.access.redhat.com/ubi8/ubi-minimal
+
+USER root
+RUN \
+    microdnf install java-1.8.0-openjdk && \
+    microdnf install python3 && \
+    microdnf clean all && \
+    [ ! -d /var/cache/yum ] || rm -rf /var/cache/yum

@@ -1,6 +1,6 @@
 # FROM docker.io/library/openjdk:8-jre-slim-bullseye
 # FROM docker.io/library/openjdk:11-slim-bullseye
-FROM docker.io/library/openjdk:17-slim-bullseye
+FROM quay.io/hyperkineticnerd/java:17-minecraft
 
 ARG mc_ver="1.18.2" \
     fabric_installer="fabric-installer-0.10.2.jar" \
